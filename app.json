@@ -1,0 +1,14 @@
+{
+    "name": "V2Ray",
+    "description": "Deploy V2ray on Heroku.",
+    "keywords": ["V2Ray"],
+    "env": {
+		"PASSWORD": {
+            "description": "V2Ray SS PASSWORD",
+            "value": "9P49*bRQUB@UWw"
+        }
+    },
+    "website": "https://www.qingmei.site/",
+    "repository": "https://github.com/itheshe/heroray",
+    "stack": "container"
+}
