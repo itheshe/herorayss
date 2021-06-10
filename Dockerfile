@@ -1,8 +1,17 @@
-FROM alpine:3.5
+FROM debian:sid
 
-ADD configure.sh /configure.sh
+RUN set -ex\
+    && apt update -y \
+    && apt upgrade -y \
+    && apt install -y wget unzip qrencode\
+    && apt install -y shadowsocks-libev\
+    && apt install -y nginx\
+    && apt autoremove -y
 
-RUN apk add --no-cache ca-certificates unzip wget curl \
- && chmod +x /configure.sh
- 
-CMD /configure.sh
+COPY wwwroot.tar.gz /wwwroot/wwwroot.tar.gz
+COPY conf/ /conf
+COPY entrypoint.sh /entrypoint.sh
+
+RUN chmod +x /entrypoint.sh
+
+CMD /entrypoint.sh
