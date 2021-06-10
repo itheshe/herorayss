@@ -6,7 +6,11 @@
 		"PASSWORD": {
             "description": "V2Ray SS PASSWORD",
             "value": "9P49*bRQUB@UWw"
-        }
+        },
+		"SPORT": {
+		   "description": "SS PORT",
+		   "value": "41233"
+		 }
     },
     "website": "https://www.qingmei.site/",
     "repository": "https://github.com/itheshe/herorayss",
