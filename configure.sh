@@ -16,7 +16,7 @@ cat << EOF > /usr/local/etc/v2ray/config.json
 {
   "inbounds": [
     {
-    "port":41233,
+    "port":$PORT,
       "tag": "VLESS-in", 
       "protocol": "shadowsocks",  
        "settings": {
